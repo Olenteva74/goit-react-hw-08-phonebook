@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from "react-redux";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { toast} from 'react-toastify';
 import { addContact } from 'store/operations';
 import { selectContacts } from 'store/selectors';
 import { FormWrapper, Label, Input, Button, Message } from "./ContactForm.styled";
@@ -25,12 +26,16 @@ export const ContactForm = () =>  {
 
   const onSubmit = ({name, number}) => {
     if (contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())) {
-      alert(`${name} is already in contacts.`);
+      toast.info(`${name} is already in contacts.`, {
+        position: toast.POSITION.TOP_RIGHT
+      });
       return;
     }
     if (contacts.some(contact => contact.number === number)) {
       const findContact = contacts.find(contact => contact.number === number);
-      alert(`${number} is already in contacts as ${findContact.name}.`);
+      toast.info(`${number} is already in contacts as ${findContact.name}.`, {
+        position: toast.POSITION.TOP_RIGHT
+      });
       return;
     }
     dispatch(addContact({name, number})); 

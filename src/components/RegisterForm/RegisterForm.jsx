@@ -14,13 +14,13 @@ const schema = yup.object().shape({
 export const RegisterForm = () => {
     const dispatch = useDispatch();
 
-    const {register, handleSubmit, reset} = useForm({
+    const {register, handleSubmit} = useForm({
         resolver: yupResolver(schema)
     });
 
     const onSubmit = ({name, email, password}) => {
       dispatch(getRegistration({name, email, password}));
-      reset();
+      
     }
     return (
         <FormContainer onSubmit={handleSubmit(onSubmit)}>
