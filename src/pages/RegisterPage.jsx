@@ -4,7 +4,7 @@ import { PageTitle, PageContainer } from "./Pages.styled";
 const RegisterPage = () => {
     return (
         <PageContainer>
-            <PageTitle>Registration page</PageTitle>
+            <PageTitle>Sign up</PageTitle>
             <RegisterForm/>
 
         </PageContainer>

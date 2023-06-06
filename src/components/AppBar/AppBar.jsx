@@ -16,8 +16,8 @@ export const AppBar = () => {
             </LinkWrapper> )
             : (<LinkWrapper>
                 
-                <Link to="/register">Register</Link>
-                <Link to="/login">Login</Link>
+                <Link to="/register">Sign up</Link>
+                <Link to="/login">Sign in</Link>
                 </LinkWrapper>)}  
          </Nav>
         </Header>          

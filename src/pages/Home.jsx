@@ -1,12 +1,7 @@
-import {PageContainer, PageTitle } from "./Pages.styled";
+import { Welcome } from "components/Welcome";
 
 const Home = () => {
-    return (
-        <PageContainer>
-              <PageTitle>Phonebook</PageTitle>
-        </PageContainer>
-       
-    )
+    return <Welcome/>
 }
 
 export default Home;

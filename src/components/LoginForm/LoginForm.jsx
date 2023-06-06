@@ -27,7 +27,7 @@ export const LoginForm = () => {
             <Input type="email" id="email" {...register("email")}/>
             <label htmlFor="password">Password</label>
             <Input type="password" id="password" {...register("password")}/>
-            <Button type="submit">Login</Button>
+            <Button type="submit">Sgn in</Button>
         </FormContainer>
     )
 }

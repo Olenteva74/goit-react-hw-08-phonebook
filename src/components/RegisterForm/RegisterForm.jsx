@@ -30,7 +30,7 @@ export const RegisterForm = () => {
             <Input type="email" id="email" {...register("email")}/>
             <label htmlFor="password">Password</label>
             <Input type="password" id="password" {...register("password")}/>
-            <Button type="submit">Register</Button>
+            <Button type="submit">Sign up</Button>
         </FormContainer>
     )
 }
